@@ -35,8 +35,6 @@ rm pidfile
 
 #Remove the header and sort the file otherwise the join won't work properly
 
-#New comment to test GIT
-
 cat spool_NEWORG | grep -i -v $MATCH| sort > spool_NEWORG_s
 cat spool_OLDORG | grep -i -v $MATCH| sort > spool_OLDORG_s
 join -1 1 -2 1 -t , spool_OLDORG_s spool_NEWORG_s > joinfile
