@@ -2,7 +2,7 @@
 
 # EXAMPLE ./parallel_spool.sh -oQCRM -nCCHQA -mName -tuser -w "where name like '%Anna%' limit 10"
 
-#Extract the arguments
+# Extract the arguments
 
 while getopts o:n:t:w:m: option
 do
@@ -34,6 +34,8 @@ done < pidfile
 rm pidfile
 
 #Remove the header and sort the file otherwise the join won't work properly
+
+#New comment to test GIT
 
 cat spool_NEWORG | grep -i -v $MATCH| sort > spool_NEWORG_s
 cat spool_OLDORG | grep -i -v $MATCH| sort > spool_OLDORG_s
